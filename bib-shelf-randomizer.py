@@ -18,6 +18,10 @@ def main():
     # Read data
     with open(filename) as json_file:
         map = json.load(json_file)
+    # TODO: Get offset from map data
+    for i in range(0, len(rnd_groups)):
+        for j in range(0, len(rnd_groups[i])):
+            rnd_groups[i][j] = rnd_groups[i][j] + 1
     # Find Floor layer
     for layer in map['layers']:
         if layer['name'] == 'Floor':
@@ -28,7 +32,7 @@ def main():
                     if layer['data'][n] in g:
                         # Replace with random selection
                         new_value = g[random.randrange(len(g))]
-                        # print('Replacing %d with %d' % ( layer['data'][n], new_value))
+                        print('Replacing %d with %d' % ( layer['data'][n], new_value))
                         layer['data'][n] = new_value
     # Write JSON
     with open(filename, 'w') as outfile:
