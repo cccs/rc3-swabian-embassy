@@ -1,0 +1,30 @@
+[
+  {
+    "tileid": 6,
+    "title": "Datenschleuder 98",
+    "url": "https://ds.ccc.de/pdfs/ds98.pdf",
+    "x": 34,
+    "y": 31
+  },
+  {
+    "tileid": 6,
+    "title": "Datenschleuder 99",
+    "url": "https://ds.ccc.de/pdfs/ds99.pdf",
+    "x": 20,
+    "y": 9
+  },
+  {
+    "tileid": 6,
+    "title": "Datenschleuder 100",
+    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
+    "x": 34,
+    "y": 32
+  },
+  {
+    "tileid": 6,
+    "title": "Datenschleuder 101",
+    "url": "https://ds.ccc.de/pdfs/ds101.pdf",
+    "x": 27,
+    "y": 21
+  }
+]
