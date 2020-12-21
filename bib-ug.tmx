@@ -369,7 +369,7 @@
  </layer>
  <layer id="5" name="toMain" width="62" height="47">
   <properties>
-   <property name="exitUrl" value="main.json#fromBib"/>
+   <property name="exitSceneUrl" value="main.json#fromBib"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -474,7 +474,7 @@
  </layer>
  <layer id="9" name="toUpper" width="62" height="47">
   <properties>
-   <property name="exitUrl" value="bib-eg.json#fromBottom"/>
+   <property name="exitSceneUrl" value="bib-eg.json#fromBottom"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

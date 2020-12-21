@@ -48,7 +48,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"exitUrl",
+                 "name":"exitSceneUrl",
                  "type":"string",
                  "value":"main.json#fromBib"
                 }],
@@ -78,7 +78,7 @@
          "opacity":1,
          "properties":[
                 {
-                 "name":"exitUrl",
+                 "name":"exitSceneUrl",
                  "type":"string",
                  "value":"bib-eg.json#fromBottom"
                 }],
