@@ -254,6 +254,9 @@
  <tileset firstgid="341" name="mapUtilities" tilewidth="32" tileheight="32" tilecount="9" columns="9">
   <image source="tiles/mapUtilities.png" width="288" height="32"/>
  </tileset>
+ <tileset firstgid="350" name="books" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <image source="tiles/books.png" width="64" height="64"/>
+ </tileset>
  <layer id="4" name="start" width="36" height="37">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
