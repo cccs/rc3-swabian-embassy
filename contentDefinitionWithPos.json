@@ -44,7 +44,7 @@
     "tileid": 1,
     "title": "Datenschleuder 98",
     "url": "https://ds.ccc.de/pdfs/ds098.pdf",
-    "x": 16,
+    "x": 15,
     "y": 31
   },
   {
@@ -69,6 +69,6 @@
     "title": "Datenschleuder 101",
     "url": "https://ds.ccc.de/pdfs/ds101.pdf",
     "x": 30,
-    "y": 5
+    "y": 12
   }
 ]

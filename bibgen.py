@@ -106,7 +106,8 @@ class Location():
         self.validPlacementPosiotions = validPlacementPosiotions
 
 class ProcessingMap():
-    def __init__(self,mapDataTemplate,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap):
+    def __init__(self,mapDataTemplate,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap,randomSeed):
+        self.randomSeed = randomSeed
         self.layerWithBooksName = layerWithBooksName
         self.tilesOfBookShelves = tilesOfBookShelves
         self.maxBooksOnMap = maxBooksOnMap
@@ -120,6 +121,10 @@ class ProcessingMap():
         self.initNewMap()
    
     def initNewMap(self):
+        #init random
+        random.seed(self.randomSeed) #TODO reinitalize on map change
+        self.randomSeed = self.randomSeed+1
+
         self.processedMaps = self.processedMaps+1
         if hasattr(self, 'data'):
             self.data.clear()
@@ -239,9 +244,7 @@ def main():
                             160,161,162,163,
                             167,168,169,170]
                     
-    #init random
-    random.seed(RANDOM_SEED) #TODO reinitalize on map change
-
+    
     # load base map
     with open(FILENAME_MAP_TEMPLATE) as map_file:
         mapTemplateData = json.load(map_file)
@@ -253,7 +256,7 @@ def main():
 
     #main loop
 
-    currentMap = ProcessingMap(mapTemplateData,FILENAME_MAP_OUTPUT, LAYER_NAME_BOOKS,TILES_OF_BOOKSHELVES,MAX_BOOKS_ON_FLOOR)
+    currentMap = ProcessingMap(mapTemplateData,FILENAME_MAP_OUTPUT, LAYER_NAME_BOOKS,TILES_OF_BOOKSHELVES,MAX_BOOKS_ON_FLOOR,RANDOM_SEED)
 
     #we have to place every content
     for content in content_definiton:
