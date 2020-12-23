@@ -1,6 +1,7 @@
 import urllib.request, json 
 import random
 from enum import Enum
+import copy
 
 class MAP():
     Layers = "layers"
@@ -120,7 +121,9 @@ class ProcessingMap():
    
     def initNewMap(self):
         self.processedMaps = self.processedMaps+1
-        self.data = self.mapDataTemplate
+        if hasattr(self, 'data'):
+            self.data.clear()
+        self.data = copy.deepcopy(self.mapDataTemplate)
         self.placedBooks=0
         self.possibleBookLocations = self.getPossibleLocations()
         self.locationsUsed.clear() 
@@ -198,8 +201,21 @@ class ProcessingMap():
         self.locationsUsed.append(newLocation)
         return newLocation
 
+    def saveMap(self):
+        #save the map     
+        mapOutput = json.dumps(self.data, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=2)
+        with open(self.outputFileName,'w+') as roomjsonfile:
+            roomjsonfile.write(mapOutput)
 
-#    def checkIfNewMapIsNeeded(self):
+ 
+
+    def checkIfNewMapIsNeeded(self):
+        #TODO check if there are possible locations left
+        if len(self.locationsUsed) >= self.maxBooksOnMap:
+            #we reached books limit
+            self.saveMap()
+            self.initNewMap()
 
 
 def main():
@@ -242,7 +258,7 @@ def main():
     #we have to place every content
     for content in content_definiton:
 
-
+        #get next randomized possible location on map. This includes position of the book tile and position of valid link tiles
         newLocation = currentMap.giveRandomizedLocation()
 
         
@@ -267,16 +283,11 @@ def main():
         content["x"] = position.x
         content["y"] = position.y
         content["file"] = currentMap.outputFileName
+        
+        currentMap.checkIfNewMapIsNeeded()
+    currentMap.saveMap() #save the last processed map in case that book limit was not reached in loop
 
-
-
-    #save the map     
-    mapOutput = json.dumps(currentMap.data, default=lambda o: o.__dict__, 
-            sort_keys=True, indent=2)
-    with open(currentMap.outputFileName,'w+') as roomjsonfile:
-        roomjsonfile.write(mapOutput)
-
-    #save the content definition with position information
+   #save the content definition with position information
     contentOutput = json.dumps(content_definiton, default=lambda o: o.__dict__, 
             sort_keys=True, indent=2)
     with open(FILENAME_CONTENT_DEFINITION_OUTPUT,'w+') as contentoutputjsonfile:
