@@ -179,11 +179,11 @@ class ProcessingMap():
         for xy in tmap:
             newPosition= Position(position.x+xy[0],position.y+xy[1])
 
-            if newPosition.isValid():
+            if newPosition.isValid() and newPosition.x>0 and newPosition.y > 0:
                 posD = Position.toDataIndex(newPosition,self.width)
                 if len(layer[LAYER.data]) > posD:
                     tile = layer[LAYER.data][posD]-1
-                    if not self.isTileColliding(tile): #TODO check for collisions with other links!
+                    if tile != 0 and (not self.isTileColliding(tile) ): #TODO check for collisions with other links!
                         #Found accessable tile in neghbourhood
                         valids.append(posD)
 
