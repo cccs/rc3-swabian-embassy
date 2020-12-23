@@ -1,30 +1,65 @@
 [
   {
-    "tileid": 6,
-    "title": "Datenschleuder 98",
-    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
-    "x": 4,
-    "y": 12
+    "tileid": 1,
+    "title": "Datenschleuder 93",
+    "url": "https://ds.ccc.de/pdfs/ds093.pdf",
+    "x": 11,
+    "y": 31
   },
   {
-    "tileid": 6,
-    "title": "Datenschleuder 99",
-    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
-    "x": 29,
-    "y": 2
+    "tileid": 1,
+    "title": "Datenschleuder 94",
+    "url": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "x": 13,
+    "y": 9
   },
   {
-    "tileid": 6,
-    "title": "Datenschleuder 100",
-    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
-    "x": 34,
+    "tileid": 1,
+    "title": "Datenschleuder 95",
+    "url": "https://ds.ccc.de/pdfs/ds095.pdf",
+    "x": 11,
     "y": 32
   },
   {
-    "tileid": 6,
+    "tileid": 1,
+    "title": "Datenschleuder 96",
+    "url": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "x": 26,
+    "y": 20
+  },
+  {
+    "tileid": 1,
+    "title": "Datenschleuder 97",
+    "url": "https://ds.ccc.de/pdfs/ds097.pdf",
+    "x": 4,
+    "y": 11
+  },
+  {
+    "tileid": 1,
+    "title": "Datenschleuder 98",
+    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
+    "x": 16,
+    "y": 31
+  },
+  {
+    "tileid": 1,
+    "title": "Datenschleuder 99",
+    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
+    "x": 15,
+    "y": 35
+  },
+  {
+    "tileid": 1,
+    "title": "Datenschleuder 100",
+    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
+    "x": 9,
+    "y": 2
+  },
+  {
+    "tileid": 1,
     "title": "Datenschleuder 101",
     "url": "https://ds.ccc.de/pdfs/ds101.pdf",
-    "x": 8,
-    "y": 25
+    "x": 30,
+    "y": 5
   }
 ]

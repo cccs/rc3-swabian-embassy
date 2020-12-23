@@ -100,6 +100,7 @@ class TILESET:
     firstgid = "firstgid"
     tilecount = "tilecount"
     tiles = "tiles"
+    name="name"
 
 class TILE:
     id = "id"
@@ -166,7 +167,12 @@ def getPossibleLocations(map,layerWithBooksName, tilesOfBookShelves,floorTile):
                 possibleLocation.append([dataPos,valids])
     return possibleLocation
     
-    
+def getTileID(tileset_name,map, tileId):
+    for tileset in map[MAP.Tilesets]:
+        if (tileset[TILESET.name]== tileset_name):
+            newTileId = tileset[TILESET.firstgid]+tileId
+            return newTileId
+    raise NameError("cannot find tileset "+tileset_name+" in template")
      
 def main():
     #constants, (TODO grab them from args?)
@@ -177,6 +183,7 @@ def main():
     FILENAME_CONTENT_DEFINITION_OUTPUT = "contentDefinitionWithPos.json"
     RANDOM_SEED = 2342001 #seed to make the "random" numbers predictable
     TILE_ID_FLOOR = 23
+    TILESET_NAME_CONTAINING_BOOKS_FOR_CONTENT = "books"
     LAYER_NAME_BOOKS = "Floor"
     TILES_OF_BOOKSHELVES = [48,49,50,51,52,53,54,
                             64,65,66,67,68,69,70,
@@ -187,6 +194,7 @@ def main():
                             144,145,146,147,
                             160,161,162,163,
                             167,168,169,170]
+                    
     #init random
     random.seed(RANDOM_SEED) #TODO reinitalize on map change
 
@@ -218,7 +226,8 @@ def main():
 
         #set a tile on the position to show the book
         newPosD = possibleBookLocations[locationIndex][0]
-        newLayer.data[newPosD] = content[CONTENT.tileid]+1
+        tileId = getTileID(TILESET_NAME_CONTAINING_BOOKS_FOR_CONTENT,currentMap,content[CONTENT.tileid])
+        newLayer.data[newPosD] = tileId
 
         #add floortiles for accessing the link
         for newFloorTilePosD in possibleBookLocations[locationIndex][1]:
