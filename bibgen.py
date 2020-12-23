@@ -99,26 +99,33 @@ class TILE_PROPERTY:
     Type ="type"
     value = "value"
 
+class Location():
+    def __init__(self,positionInDataArray,validPlacementPosiotions):
+        self.positionInDataArray = positionInDataArray
+        self.validPlacementPosiotions = validPlacementPosiotions
+
 class ProcessingMap():
-    def __init__(self,mapData,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap):
+    def __init__(self,mapDataTemplate,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap):
         self.layerWithBooksName = layerWithBooksName
         self.tilesOfBookShelves = tilesOfBookShelves
         self.maxBooksOnMap = maxBooksOnMap
         self.outputFileNameTemplate = outputFileName
         self.processedMaps = 0
         self.locationsUsed =[]
-        self.loadMap(mapData)
+        self.height =  mapDataTemplate[MAP.Layers][0][MAP.Height]
+        self.width =  mapDataTemplate[MAP.Layers][0][MAP.Width]
+        self.mapDataTemplate = mapDataTemplate
+
+        self.initNewMap()
    
-    def loadMap(self,mapData):
+    def initNewMap(self):
         self.processedMaps = self.processedMaps+1
-        self.data = mapData
-        self.height =  mapData[MAP.Layers][0][MAP.Height]
-        self.width =  mapData[MAP.Layers][0][MAP.Width]
+        self.data = self.mapDataTemplate
         self.placedBooks=0
         self.possibleBookLocations = self.getPossibleLocations()
         self.locationsUsed.clear() 
         self.outputFileName =  self.outputFileNameTemplate.replace("#",str(self.processedMaps)) # generate the new filename for the output map
-
+        print("ProcessingMap: init new map #"+str(self.processedMaps)+ " with filename "+self.outputFileName)
 
    
     def isTileColliding(self,tileId):
@@ -170,7 +177,7 @@ class ProcessingMap():
             if tileidOnLayer in self.tilesOfBookShelves:
                 valids = self.checkNeighbourhood(layerWithBooks,dataPos)
                 if len(valids) > 0:
-                    possibleLocation.append([dataPos,valids])
+                    possibleLocation.append(Location(dataPos,valids))
         return possibleLocation
 
     def getTileID(self,tileset_name, tileId):
@@ -180,6 +187,19 @@ class ProcessingMap():
                 return newTileId
         raise NameError("cannot find tileset "+tileset_name+" in template")
 
+    def giveRandomizedLocation(self):
+        locationNotFound = True
+        while locationNotFound:
+            locationIndex = random.randint(0,len(self.possibleBookLocations)-1)
+            if not locationIndex in self.locationsUsed:
+                break
+            #TODO abort if no location can be found
+        newLocation = self.possibleBookLocations[locationIndex]
+        self.locationsUsed.append(newLocation)
+        return newLocation
+
+
+#    def checkIfNewMapIsNeeded(self):
 
 
 def main():
@@ -222,36 +242,33 @@ def main():
     #we have to place every content
     for content in content_definiton:
 
+
+        newLocation = currentMap.giveRandomizedLocation()
+
         
-
-
-        locationNotFound = True
-        while locationNotFound:
-            locationIndex = random.randint(0,len(currentMap.possibleBookLocations)-1)
-            if not locationIndex in currentMap.locationsUsed:
-                break
-            #TODO abort if no location can be found
         #new layer, because the layer has the link info
         newLayer = Layer(LayerTypes.TILELAYER,currentMap.width,currentMap.height,content[CONTENT.title])
         newLayer.properties.append(LayerProperty("openWebsite", "string", content[CONTENT.url])) 
 
         #set a tile on the position to show the book
-        newPosD = currentMap.possibleBookLocations[locationIndex][0]
         tileId = currentMap.getTileID(TILESET_NAME_CONTAINING_BOOKS_FOR_CONTENT,content[CONTENT.tileid])
-        newLayer.data[newPosD] = tileId
+        newLayer.data[newLocation.positionInDataArray] = tileId
 
         #add floortiles for accessing the link
-        for newFloorTilePosD in currentMap.possibleBookLocations[locationIndex][1]:
+        for newFloorTilePosD in newLocation.validPlacementPosiotions:
             newLayer.data[newFloorTilePosD] = TILE_ID_FLOOR+1
 
         #add the layer to the map
         currentMap.data[MAP.Layers].insert(len(currentMap.data[MAP.Layers])-1,newLayer)
 
 
-        position = Position.toPosition(newPosD,currentMap.width)
-        print ("processing " + content[CONTENT.title]+" on data="+str(newPosD)+" pos x="+str(position.x)+" y:"+str(position.y))
+        position = Position.toPosition(newLocation.positionInDataArray,currentMap.width)
+        print ("processing " + content[CONTENT.title]+" on data="+str(newLocation.positionInDataArray)+" pos x="+str(position.x)+" y:"+str(position.y))
         content["x"] = position.x
         content["y"] = position.y
+        content["file"] = currentMap.outputFileName
+
+
 
     #save the map     
     mapOutput = json.dumps(currentMap.data, default=lambda o: o.__dict__, 
