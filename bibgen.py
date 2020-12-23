@@ -41,6 +41,10 @@ class Layer():
         for pos,element in enumerate(layerList):
             if element.name == name:
                 return pos
+    def __getitem__(self, item):
+        if item =="name":
+            return self.name
+        return self.id
 
     def __init__(self,type: LayerTypes, width, height,name):
         if type == LayerTypes.TILELAYER:
@@ -235,10 +239,15 @@ class ProcessingMap():
             print("ProcessingMap: postprocess: added "+self.outputFileName)
         # remove last stairway to heaven :-)
         lastMap = self.generatedMaps[-1]
-        for layer in lastMap.data[MAP.Layers]:
-            if layer[LAYER.name]=="toNext":
-                lastMap.data[MAP.Layers].remove(layer)
-                break
+        found = True
+        while found:
+            found = False
+            for layer in lastMap.data[MAP.Layers]:
+                if str(layer[LAYER.name]).find("toNext") != -1:
+                    lastMap.data[MAP.Layers].remove(layer)
+                    found = True
+                    break
+                
         
         #set links between floors
         for index in range (1,len(self.generatedMaps)):
