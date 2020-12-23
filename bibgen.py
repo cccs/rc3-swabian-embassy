@@ -100,74 +100,85 @@ class TILE_PROPERTY:
     value = "value"
 
 class ProcessingMap():
-    def __init__(self, mapData):
+    def __init__(self,mapData,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap):
+        self.layerWithBooksName = layerWithBooksName
+        self.tilesOfBookShelves = tilesOfBookShelves
+        self.maxBooksOnMap = maxBooksOnMap
+        self.outputFileNameTemplate = outputFileName
+        self.processedMaps = 0
+        self.locationsUsed =[]
+        self.loadMap(mapData)
+   
+    def loadMap(self,mapData):
+        self.processedMaps = self.processedMaps+1
         self.data = mapData
         self.height =  mapData[MAP.Layers][0][MAP.Height]
         self.width =  mapData[MAP.Layers][0][MAP.Width]
+        self.placedBooks=0
+        self.possibleBookLocations = self.getPossibleLocations()
+        self.locationsUsed.clear() 
+        self.outputFileName =  self.outputFileNameTemplate.replace("#",str(self.processedMaps)) # generate the new filename for the output map
 
 
-def isTileColliding(map:ProcessingMap,tileId):
-    # find the tileset responsible for the tileid
-    for tileset in map.data[MAP.Tilesets]:
-        if tileId in range(tileset[TILESET.firstgid],tileset[TILESET.firstgid]+tileset[TILESET.tilecount]):
-            # we found the tileset our tileid belongs to
-            # now calc the tileid in the tileset
-            innerTileId = tileId - (tileset[TILESET.firstgid]-1)
-            for tile in tileset[TILESET.tiles]:
-                if tile[TILE.id]== innerTileId:
-                    #we found a tile description
-                    for tileProperty in tile[TILE.properties]:
-                        if (tileProperty[TILE_PROPERTY.name] == "collides") and (tileProperty[TILE_PROPERTY.value]== True):
-                            #tile is colliding
-                            return True
-            return False
-    return False #just to be shure...    
+   
+    def isTileColliding(self,tileId):
+        # find the tileset responsible for the tileid
+        for tileset in self.data[MAP.Tilesets]:
+            if tileId in range(tileset[TILESET.firstgid],tileset[TILESET.firstgid]+tileset[TILESET.tilecount]):
+                # we found the tileset our tileid belongs to
+                # now calc the tileid in the tileset
+                innerTileId = tileId - (tileset[TILESET.firstgid]-1)
+                for tile in tileset[TILESET.tiles]:
+                    if tile[TILE.id]== innerTileId:
+                        #we found a tile description
+                        for tileProperty in tile[TILE.properties]:
+                            if (tileProperty[TILE_PROPERTY.name] == "collides") and (tileProperty[TILE_PROPERTY.value]== True):
+                                #tile is colliding
+                                return True
+                return False
+        return False #just to be shure...    
 
+ 
+    #checks if one of the surrounding fields is accessable for a avatar
+    def checkNeighbourhood(self,layer,dataPos):
+        position = Position.toPosition(dataPos,self.width)
+        tmap = [[0,1],[0,-1],[1,0],[-1,0]]
+        valids = []
+        for xy in tmap:
+            newPosition= Position(position.x+xy[0],position.y+xy[1])
 
+            if newPosition.isValid():
+                posD = Position.toDataIndex(newPosition,self.width)
+                if len(layer[LAYER.data]) > posD:
+                    tile = layer[LAYER.data][posD]-1
+                    if not self.isTileColliding(tile): #TODO check for collisions with other links!
+                        #Found accessable tile in neghbourhood
+                        valids.append(posD)
 
+        return valids        
 
+    def getPossibleLocations(self):
+        # find corresponding layer
+        possibleLocation = []
+        for layer in self.data[MAP.Layers]:
+            if layer[LAYER.name] == self.layerWithBooksName:
+                layerWithBooks = layer
+                break
+        #go trough all bookshelf tiles
+        for dataPos in range(len(layerWithBooks[LAYER.data])):
+            tileidOnLayer = layerWithBooks[LAYER.data][dataPos]
+            if tileidOnLayer in self.tilesOfBookShelves:
+                valids = self.checkNeighbourhood(layerWithBooks,dataPos)
+                if len(valids) > 0:
+                    possibleLocation.append([dataPos,valids])
+        return possibleLocation
 
-#checks if one of the surrounding fields is accessable for a avatar
-def checkNeighbourhood(map: ProcessingMap,layer,dataPos,floorTile):
-    position = Position.toPosition(dataPos,map.width)
-    tmap = [[0,1],[0,-1],[1,0],[-1,0]]
-    valids = []
-    for xy in tmap:
-        newPosition= Position(position.x+xy[0],position.y+xy[1])
-
-        if newPosition.isValid():
-            posD = Position.toDataIndex(newPosition,map.width)
-            if len(layer[LAYER.data]) > posD:
-                tile = layer[LAYER.data][posD]-1
-                if not isTileColliding(map,tile): #TODO check for collisions with other links!
-                    #Found accessable tile in neghbourhood
-                    valids.append(posD)
-
-    return valids        
-
-
-def getPossibleLocations(map:ProcessingMap,layerWithBooksName, tilesOfBookShelves,floorTile):
-    # find corresponding layer
-    possibleLocation = []
-    for layer in map.data[MAP.Layers]:
-        if layer[LAYER.name] == layerWithBooksName:
-            layerWithBooks = layer
-            break
-    #go trough all bookshelf tiles
-    for dataPos in range(len(layerWithBooks[LAYER.data])):
-        tileidOnLayer = layerWithBooks[LAYER.data][dataPos]
-        if tileidOnLayer in tilesOfBookShelves:
-            valids = checkNeighbourhood(map,layerWithBooks,dataPos,floorTile)
-            if len(valids) > 0:
-                possibleLocation.append([dataPos,valids])
-    return possibleLocation
-    
-def getTileID(tileset_name,map:ProcessingMap, tileId):
-    for tileset in map.data[MAP.Tilesets]:
-        if (tileset[TILESET.name]== tileset_name):
-            newTileId = tileset[TILESET.firstgid]+tileId
-            return newTileId
-    raise NameError("cannot find tileset "+tileset_name+" in template")
+    def getTileID(self,tileset_name, tileId):
+        for tileset in self.data[MAP.Tilesets]:
+            if (tileset[TILESET.name]== tileset_name):
+                newTileId = tileset[TILESET.firstgid]+tileId
+                return newTileId
+        raise NameError("cannot find tileset "+tileset_name+" in template")
 
 
 
@@ -206,17 +217,18 @@ def main():
 
     #main loop
 
-    currentMap = ProcessingMap(mapTemplateData)
+    currentMap = ProcessingMap(mapTemplateData,FILENAME_MAP_OUTPUT, LAYER_NAME_BOOKS,TILES_OF_BOOKSHELVES,MAX_BOOKS_ON_FLOOR)
 
-    #get all locations where a book placement is possible
-    possibleBookLocations = getPossibleLocations(currentMap, LAYER_NAME_BOOKS,TILES_OF_BOOKSHELVES,TILE_ID_FLOOR)
-    locationsUsed=[]
     #we have to place every content
     for content in content_definiton:
+
+        
+
+
         locationNotFound = True
         while locationNotFound:
-            locationIndex = random.randint(0,len(possibleBookLocations)-1)
-            if not locationIndex in locationsUsed:
+            locationIndex = random.randint(0,len(currentMap.possibleBookLocations)-1)
+            if not locationIndex in currentMap.locationsUsed:
                 break
             #TODO abort if no location can be found
         #new layer, because the layer has the link info
@@ -224,12 +236,12 @@ def main():
         newLayer.properties.append(LayerProperty("openWebsite", "string", content[CONTENT.url])) 
 
         #set a tile on the position to show the book
-        newPosD = possibleBookLocations[locationIndex][0]
-        tileId = getTileID(TILESET_NAME_CONTAINING_BOOKS_FOR_CONTENT,currentMap,content[CONTENT.tileid])
+        newPosD = currentMap.possibleBookLocations[locationIndex][0]
+        tileId = currentMap.getTileID(TILESET_NAME_CONTAINING_BOOKS_FOR_CONTENT,content[CONTENT.tileid])
         newLayer.data[newPosD] = tileId
 
         #add floortiles for accessing the link
-        for newFloorTilePosD in possibleBookLocations[locationIndex][1]:
+        for newFloorTilePosD in currentMap.possibleBookLocations[locationIndex][1]:
             newLayer.data[newFloorTilePosD] = TILE_ID_FLOOR+1
 
         #add the layer to the map
@@ -244,7 +256,7 @@ def main():
     #save the map     
     mapOutput = json.dumps(currentMap.data, default=lambda o: o.__dict__, 
             sort_keys=True, indent=2)
-    with open(FILENAME_MAP_OUTPUT,'w+') as roomjsonfile:
+    with open(currentMap.outputFileName,'w+') as roomjsonfile:
         roomjsonfile.write(mapOutput)
 
     #save the content definition with position information
