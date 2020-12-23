@@ -61,14 +61,6 @@ class LayerProperty():
         self.value = value
 
 
-class MapProperties():
-    @staticmethod
-    def load(map):
-        MapProperties.height =  map[MAP.Layers][0][MAP.Height]
-        MapProperties.width =  map[MAP.Layers][0][MAP.Width]
-        MapProperties.map = map
-    width = 0
-    height = 0
 
 class Position():
     def __init__ (self,x,y):
@@ -91,10 +83,6 @@ class Position():
 
 
 
-def getNextPosition():
-    x = random.randint(0,MapProperties.width-1)
-    y = random.randint(0,MapProperties.height-1)
-    return Position(x,y)
 
 class TILESET:
     firstgid = "firstgid"
@@ -111,9 +99,16 @@ class TILE_PROPERTY:
     Type ="type"
     value = "value"
 
-def isTileColliding(map,tileId):
+class ProcessingMap():
+    def __init__(self, mapData):
+        self.data = mapData
+        self.height =  mapData[MAP.Layers][0][MAP.Height]
+        self.width =  mapData[MAP.Layers][0][MAP.Width]
+
+
+def isTileColliding(map:ProcessingMap,tileId):
     # find the tileset responsible for the tileid
-    for tileset in map[MAP.Tilesets]:
+    for tileset in map.data[MAP.Tilesets]:
         if tileId in range(tileset[TILESET.firstgid],tileset[TILESET.firstgid]+tileset[TILESET.tilecount]):
             # we found the tileset our tileid belongs to
             # now calc the tileid in the tileset
@@ -133,15 +128,15 @@ def isTileColliding(map,tileId):
 
 
 #checks if one of the surrounding fields is accessable for a avatar
-def checkNeighbourhood(map,layer,dataPos,floorTile):
-    position = Position.toPosition(dataPos,MapProperties.width)
+def checkNeighbourhood(map: ProcessingMap,layer,dataPos,floorTile):
+    position = Position.toPosition(dataPos,map.width)
     tmap = [[0,1],[0,-1],[1,0],[-1,0]]
     valids = []
     for xy in tmap:
         newPosition= Position(position.x+xy[0],position.y+xy[1])
 
         if newPosition.isValid():
-            posD = Position.toDataIndex(newPosition,MapProperties.width)
+            posD = Position.toDataIndex(newPosition,map.width)
             if len(layer[LAYER.data]) > posD:
                 tile = layer[LAYER.data][posD]-1
                 if not isTileColliding(map,tile): #TODO check for collisions with other links!
@@ -151,10 +146,10 @@ def checkNeighbourhood(map,layer,dataPos,floorTile):
     return valids        
 
 
-def getPossibleLocations(map,layerWithBooksName, tilesOfBookShelves,floorTile):
+def getPossibleLocations(map:ProcessingMap,layerWithBooksName, tilesOfBookShelves,floorTile):
     # find corresponding layer
     possibleLocation = []
-    for layer in map[MAP.Layers]:
+    for layer in map.data[MAP.Layers]:
         if layer[LAYER.name] == layerWithBooksName:
             layerWithBooks = layer
             break
@@ -167,18 +162,20 @@ def getPossibleLocations(map,layerWithBooksName, tilesOfBookShelves,floorTile):
                 possibleLocation.append([dataPos,valids])
     return possibleLocation
     
-def getTileID(tileset_name,map, tileId):
-    for tileset in map[MAP.Tilesets]:
+def getTileID(tileset_name,map:ProcessingMap, tileId):
+    for tileset in map.data[MAP.Tilesets]:
         if (tileset[TILESET.name]== tileset_name):
             newTileId = tileset[TILESET.firstgid]+tileId
             return newTileId
     raise NameError("cannot find tileset "+tileset_name+" in template")
-     
+
+
+
 def main():
     #constants, (TODO grab them from args?)
-    MAX_BOOKS_ON_FLOOR = 20 #TODO check if number is useable, adapt if needed
-    FILENAME_MAP ="bib-og.json"
-    FILENAME_MAP_OUTPUT="bib-og_1.json"
+    MAX_BOOKS_ON_FLOOR = 5 #TODO check if number is useable, adapt if needed
+    FILENAME_MAP_TEMPLATE ="bib-og.json"
+    FILENAME_MAP_OUTPUT="bib-og_#.json"
     FILENAME_CONTENT_DEFINTION = "contentDefinition.json"
     FILENAME_CONTENT_DEFINITION_OUTPUT = "contentDefinitionWithPos.json"
     RANDOM_SEED = 2342001 #seed to make the "random" numbers predictable
@@ -199,16 +196,18 @@ def main():
     random.seed(RANDOM_SEED) #TODO reinitalize on map change
 
     # load base map
-    with open(FILENAME_MAP) as map_file:
-        mapData = json.load(map_file)
+    with open(FILENAME_MAP_TEMPLATE) as map_file:
+        mapTemplateData = json.load(map_file)
 
 
     #load content definition 
     with open(FILENAME_CONTENT_DEFINTION) as json_file:
         content_definiton = json.load(json_file)
 
-    currentMap = mapData # current map, because we want to change maps when max book limit is reached
-    MapProperties.load(currentMap)
+    #main loop
+
+    currentMap = ProcessingMap(mapTemplateData)
+
     #get all locations where a book placement is possible
     possibleBookLocations = getPossibleLocations(currentMap, LAYER_NAME_BOOKS,TILES_OF_BOOKSHELVES,TILE_ID_FLOOR)
     locationsUsed=[]
@@ -221,7 +220,7 @@ def main():
                 break
             #TODO abort if no location can be found
         #new layer, because the layer has the link info
-        newLayer = Layer(LayerTypes.TILELAYER,MapProperties.width,MapProperties.height,content[CONTENT.title])
+        newLayer = Layer(LayerTypes.TILELAYER,currentMap.width,currentMap.height,content[CONTENT.title])
         newLayer.properties.append(LayerProperty("openWebsite", "string", content[CONTENT.url])) 
 
         #set a tile on the position to show the book
@@ -234,16 +233,16 @@ def main():
             newLayer.data[newFloorTilePosD] = TILE_ID_FLOOR+1
 
         #add the layer to the map
-        currentMap[MAP.Layers].insert(len(currentMap[MAP.Layers])-1,newLayer)
+        currentMap.data[MAP.Layers].insert(len(currentMap.data[MAP.Layers])-1,newLayer)
 
 
-        position = Position.toPosition(newPosD,MapProperties.width)
+        position = Position.toPosition(newPosD,currentMap.width)
         print ("processing " + content[CONTENT.title]+" on data="+str(newPosD)+" pos x="+str(position.x)+" y:"+str(position.y))
         content["x"] = position.x
         content["y"] = position.y
 
     #save the map     
-    mapOutput = json.dumps(currentMap, default=lambda o: o.__dict__, 
+    mapOutput = json.dumps(currentMap.data, default=lambda o: o.__dict__, 
             sort_keys=True, indent=2)
     with open(FILENAME_MAP_OUTPUT,'w+') as roomjsonfile:
         roomjsonfile.write(mapOutput)
