@@ -19,7 +19,12 @@ class CONTENT():
 class LAYER():
     name = "name"
     data = "data"
+    properties = "properties"
 
+class LAYER_PROPERTY():
+    name = "name"
+    Type ="type"
+    value = "value"
 class LayerTypes(Enum):
     TILELAYER=0
     OBJECTGROUP=1
@@ -105,6 +110,11 @@ class Location():
         self.positionInDataArray = positionInDataArray
         self.validPlacementPosiotions = validPlacementPosiotions
 
+class GeneratedMap():
+    def __init__(self,data,filename):
+        self.data = copy.deepcopy(data)
+        self.filename = copy.deepcopy(filename)
+
 class ProcessingMap():
     def __init__(self,mapDataTemplate,outputFileName,layerWithBooksName,tilesOfBookShelves,maxBooksOnMap,randomSeed):
         self.randomSeed = randomSeed
@@ -117,19 +127,22 @@ class ProcessingMap():
         self.height =  mapDataTemplate[MAP.Layers][0][MAP.Height]
         self.width =  mapDataTemplate[MAP.Layers][0][MAP.Width]
         self.mapDataTemplate = mapDataTemplate
-
+        self.isSaved = False
+        self.generatedMaps =[]
         self.initNewMap()
    
     def initNewMap(self):
         #init random
+        self.isSaved = False
         random.seed(self.randomSeed) #TODO reinitalize on map change
         self.randomSeed = self.randomSeed+1
 
         self.processedMaps = self.processedMaps+1
         if hasattr(self, 'data'):
+            self.generatedMaps.append(GeneratedMap(self.data,self.outputFileName))
             self.data.clear()
+
         self.data = copy.deepcopy(self.mapDataTemplate)
-        self.placedBooks=0
         self.possibleBookLocations = self.getPossibleLocations()
         self.locationsUsed.clear() 
         self.outputFileName =  self.outputFileNameTemplate.replace("#",str(self.processedMaps)) # generate the new filename for the output map
@@ -206,12 +219,47 @@ class ProcessingMap():
         self.locationsUsed.append(newLocation)
         return newLocation
 
-    def saveMap(self):
-        #save the map     
-        mapOutput = json.dumps(self.data, default=lambda o: o.__dict__, 
-            sort_keys=True, indent=2)
-        with open(self.outputFileName,'w+') as roomjsonfile:
-            roomjsonfile.write(mapOutput)
+    def setLayerProperty(self, data,layerName,propertyName, value):
+        for layer in data[MAP.Layers]:
+            if layer[LAYER.name] == layerName:
+                for prop in layer[LAYER.properties]:
+                    if prop[LAYER_PROPERTY.name] == propertyName:
+                        prop[LAYER_PROPERTY.value] = value
+                        break
+                break
+                
+
+    def postprocess(self):
+        if len(self.locationsUsed)>0:
+            self.generatedMaps.append(GeneratedMap(self.data,self.outputFileName))
+            print("ProcessingMap: postprocess: added "+self.outputFileName)
+        # remove last stairway to heaven :-)
+        lastMap = self.generatedMaps[-1]
+        for layer in lastMap.data[MAP.Layers]:
+            if layer[LAYER.name]=="toNext":
+                lastMap.data[MAP.Layers].remove(layer)
+                break
+        
+        #set links between floors
+        for index in range (1,len(self.generatedMaps)):
+            previousGenMap = self.generatedMaps[index-1]
+            actualGenMap = self.generatedMaps[index]
+            self.setLayerProperty(previousGenMap.data,"toNext","exitSceneUrl",actualGenMap.filename+"#fromBottom")
+            self.setLayerProperty(actualGenMap.data,"toPrev","exitSceneUrl",previousGenMap.filename+"#fromTop")
+            
+
+
+
+
+    def saveMaps(self):
+        for ele in self.generatedMaps:
+
+            #save the map     
+            mapOutput = json.dumps(ele.data, default=lambda o: o.__dict__, 
+                sort_keys=True, indent=2)
+            with open(ele.filename,'w+') as roomjsonfile:
+                roomjsonfile.write(mapOutput)
+            print("ProcessingMap: saved file "+ele.filename)
 
  
 
@@ -219,7 +267,6 @@ class ProcessingMap():
         #TODO check if there are possible locations left
         if len(self.locationsUsed) >= self.maxBooksOnMap:
             #we reached books limit
-            self.saveMap()
             self.initNewMap()
 
 
@@ -288,7 +335,8 @@ def main():
         content["file"] = currentMap.outputFileName
         
         currentMap.checkIfNewMapIsNeeded()
-    currentMap.saveMap() #save the last processed map in case that book limit was not reached in loop
+    currentMap.postprocess()
+    currentMap.saveMaps() #save the last processed map in case that book limit was not reached in loop
 
    #save the content definition with position information
     contentOutput = json.dumps(content_definiton, default=lambda o: o.__dict__, 

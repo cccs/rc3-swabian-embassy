@@ -2,73 +2,177 @@
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 93",
-    "url": "https://ds.ccc.de/pdfs/ds093.pdf",
+    "title": "Datenschleuder 80",
+    "url": "https://ds.ccc.de/pdfs/ds080.pdf",
     "x": 11,
     "y": 31
   },
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 94",
-    "url": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "title": "Datenschleuder 81",
+    "url": "https://ds.ccc.de/pdfs/ds081.pdf",
     "x": 13,
     "y": 9
   },
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 95",
-    "url": "https://ds.ccc.de/pdfs/ds095.pdf",
+    "title": "Datenschleuder 82",
+    "url": "https://ds.ccc.de/pdfs/ds082.pdf",
     "x": 11,
     "y": 32
   },
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 96",
-    "url": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "title": "Datenschleuder 83",
+    "url": "https://ds.ccc.de/pdfs/ds083.pdf",
     "x": 26,
     "y": 20
   },
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 97",
-    "url": "https://ds.ccc.de/pdfs/ds097.pdf",
+    "title": "Datenschleuder 84",
+    "url": "https://ds.ccc.de/pdfs/ds084.pdf",
     "x": 4,
     "y": 11
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 98",
-    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
+    "title": "Datenschleuder 85",
+    "url": "https://ds.ccc.de/pdfs/ds085.pdf",
     "x": 15,
     "y": 31
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 99",
-    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
+    "title": "Datenschleuder 86",
+    "url": "https://ds.ccc.de/pdfs/ds086.pdf",
     "x": 15,
     "y": 35
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 100",
-    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
+    "title": "Datenschleuder 87",
+    "url": "https://ds.ccc.de/pdfs/ds087.pdf",
     "x": 9,
     "y": 2
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 101",
-    "url": "https://ds.ccc.de/pdfs/ds101.pdf",
+    "title": "Datenschleuder 88",
+    "url": "https://ds.ccc.de/pdfs/ds088.pdf",
     "x": 30,
     "y": 12
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 1,
+    "title": "Datenschleuder 89",
+    "url": "https://ds.ccc.de/pdfs/ds088.pdf",
+    "x": 13,
+    "y": 1
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 90",
+    "url": "https://ds.ccc.de/pdfs/ds090.pdf",
+    "x": 31,
+    "y": 32
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 91",
+    "url": "https://ds.ccc.de/pdfs/ds091.pdf",
+    "x": 18,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 92",
+    "url": "https://ds.ccc.de/pdfs/ds092.pdf",
+    "x": 16,
+    "y": 32
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 93",
+    "url": "https://ds.ccc.de/pdfs/ds093.pdf",
+    "x": 11,
+    "y": 1
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 94",
+    "url": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "x": 12,
+    "y": 35
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 1,
+    "title": "Datenschleuder 95",
+    "url": "https://ds.ccc.de/pdfs/ds095.pdf",
+    "x": 20,
+    "y": 31
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 1,
+    "title": "Datenschleuder 96",
+    "url": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "x": 34,
+    "y": 11
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 1,
+    "title": "Datenschleuder 97",
+    "url": "https://ds.ccc.de/pdfs/ds097.pdf",
+    "x": 25,
+    "y": 35
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 1,
+    "title": "Datenschleuder 98",
+    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
+    "x": 20,
+    "y": 2
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 1,
+    "title": "Datenschleuder 99",
+    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
+    "x": 1,
+    "y": 10
+  },
+  {
+    "file": "bib-og_5.json",
+    "tileid": 1,
+    "title": "Datenschleuder 100",
+    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
+    "x": 21,
+    "y": 2
+  },
+  {
+    "file": "bib-og_5.json",
+    "tileid": 1,
+    "title": "Datenschleuder 101",
+    "url": "https://ds.ccc.de/pdfs/ds101.pdf",
+    "x": 31,
+    "y": 26
   }
 ]
