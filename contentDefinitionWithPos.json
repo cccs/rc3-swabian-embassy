@@ -1,178 +1,762 @@
 [
   {
     "file": "bib-og_1.json",
-    "tileid": 1,
-    "title": "Datenschleuder 80",
-    "url": "https://ds.ccc.de/pdfs/ds080.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 2",
+    "url": "https://ds.ccc.de/pdfs/ds002.pdf",
     "x": 4,
     "y": 16
   },
   {
     "file": "bib-og_1.json",
-    "tileid": 1,
-    "title": "Datenschleuder 81",
-    "url": "https://ds.ccc.de/pdfs/ds081.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 3",
+    "url": "https://ds.ccc.de/pdfs/ds003.pdf",
     "x": 31,
     "y": 5
   },
   {
     "file": "bib-og_1.json",
-    "tileid": 1,
-    "title": "Datenschleuder 82",
-    "url": "https://ds.ccc.de/pdfs/ds082.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 4",
+    "url": "https://ds.ccc.de/pdfs/ds004.pdf",
     "x": 10,
     "y": 35
   },
   {
     "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 83",
-    "url": "https://ds.ccc.de/pdfs/ds083.pdf",
+    "title": "Datenschleuder 7",
+    "url": "https://ds.ccc.de/pdfs/ds007.pdf",
     "x": 10,
     "y": 28
   },
   {
     "file": "bib-og_1.json",
-    "tileid": 1,
-    "title": "Datenschleuder 84",
-    "url": "https://ds.ccc.de/pdfs/ds084.pdf",
+    "tileid": 3,
+    "title": "Datenschleuder 8",
+    "url": "https://ds.ccc.de/pdfs/ds008.pdf",
     "x": 4,
     "y": 17
   },
   {
-    "file": "bib-og_2.json",
+    "file": "bib-og_1.json",
+    "tileid": 2,
+    "title": "Datenschleuder 13",
+    "url": "https://ds.ccc.de/pdfs/ds013.pdf",
+    "x": 22,
+    "y": 9
+  },
+  {
+    "file": "bib-og_1.json",
     "tileid": 1,
-    "title": "Datenschleuder 85",
-    "url": "https://ds.ccc.de/pdfs/ds085.pdf",
+    "title": "Datenschleuder 14",
+    "url": "https://ds.ccc.de/pdfs/ds014.pdf",
+    "x": 16,
+    "y": 6
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 15",
+    "url": "https://ds.ccc.de/pdfs/ds015.pdf",
+    "x": 19,
+    "y": 35
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 16",
+    "url": "https://ds.ccc.de/pdfs/ds016.pdf",
+    "x": 5,
+    "y": 16
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 17",
+    "url": "https://ds.ccc.de/pdfs/ds017.pdf",
+    "x": 4,
+    "y": 20
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 2,
+    "title": "Datenschleuder 18",
+    "url": "https://ds.ccc.de/pdfs/ds018.pdf",
+    "x": 10,
+    "y": 31
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 3,
+    "title": "Datenschleuder 19",
+    "url": "https://ds.ccc.de/pdfs/ds019.pdf",
+    "x": 20,
+    "y": 2
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 20",
+    "url": "https://ds.ccc.de/pdfs/ds020.pdf",
+    "x": 1,
+    "y": 5
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 21",
+    "url": "https://ds.ccc.de/pdfs/ds021.pdf",
+    "x": 25,
+    "y": 32
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 22",
+    "url": "https://ds.ccc.de/pdfs/ds022.pdf",
+    "x": 28,
+    "y": 35
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 23",
+    "url": "https://ds.ccc.de/pdfs/ds023.pdf",
+    "x": 25,
+    "y": 28
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 3,
+    "title": "Datenschleuder 24",
+    "url": "https://ds.ccc.de/pdfs/ds024.pdf",
+    "x": 34,
+    "y": 8
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 25",
+    "url": "https://ds.ccc.de/pdfs/ds025.pdf",
+    "x": 8,
+    "y": 2
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 3,
+    "title": "Datenschleuder 30",
+    "url": "https://ds.ccc.de/pdfs/ds030.pdf",
+    "x": 5,
+    "y": 26
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 31",
+    "url": "https://ds.ccc.de/pdfs/ds031.pdf",
+    "x": 8,
+    "y": 2
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 2,
+    "title": "Datenschleuder 32",
+    "url": "https://ds.ccc.de/pdfs/ds032.pdf",
+    "x": 16,
+    "y": 5
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 2,
+    "title": "Datenschleuder 33",
+    "url": "https://ds.ccc.de/pdfs/ds033.pdf",
+    "x": 20,
+    "y": 35
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 34",
+    "url": "https://ds.ccc.de/pdfs/ds034.pdf",
+    "x": 1,
+    "y": 21
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 35",
+    "url": "https://ds.ccc.de/pdfs/ds035.pdf",
+    "x": 26,
+    "y": 2
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 36",
+    "url": "https://ds.ccc.de/pdfs/ds036.pdf",
+    "x": 1,
+    "y": 13
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 37",
+    "url": "https://ds.ccc.de/pdfs/ds037.pdf",
+    "x": 26,
+    "y": 35
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 38",
+    "url": "https://ds.ccc.de/pdfs/ds038.pdf",
+    "x": 31,
+    "y": 17
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 1,
+    "title": "Datenschleuder 39",
+    "url": "https://ds.ccc.de/pdfs/ds039.pdf",
+    "x": 19,
+    "y": 2
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 3,
+    "title": "Datenschleuder 40",
+    "url": "https://ds.ccc.de/pdfs/ds040.pdf",
+    "x": 26,
+    "y": 17
+  },
+  {
+    "file": "bib-og_1.json",
+    "tileid": 0,
+    "title": "Datenschleuder 41",
+    "url": "https://ds.ccc.de/pdfs/ds041.pdf",
+    "x": 27,
+    "y": 14
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 42",
+    "url": "https://ds.ccc.de/pdfs/ds042.pdf",
     "x": 8,
     "y": 22
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 86",
-    "url": "https://ds.ccc.de/pdfs/ds086.pdf",
+    "title": "Datenschleuder 43",
+    "url": "https://ds.ccc.de/pdfs/ds043.pdf",
     "x": 34,
     "y": 31
   },
   {
     "file": "bib-og_2.json",
-    "tileid": 1,
-    "title": "Datenschleuder 87",
-    "url": "https://ds.ccc.de/pdfs/ds087.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 44,5",
+    "url": "https://ds.ccc.de/pdfs/ds044,5.pdf",
     "x": 15,
     "y": 31
   },
   {
     "file": "bib-og_2.json",
-    "tileid": 1,
-    "title": "Datenschleuder 88",
-    "url": "https://ds.ccc.de/pdfs/ds088.pdf",
+    "tileid": 3,
+    "title": "Datenschleuder 44",
+    "url": "https://ds.ccc.de/pdfs/ds044.pdf",
     "x": 34,
     "y": 25
   },
   {
     "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 89",
-    "url": "https://ds.ccc.de/pdfs/ds088.pdf",
+    "title": "Datenschleuder 45",
+    "url": "https://ds.ccc.de/pdfs/ds045.pdf",
     "x": 5,
     "y": 16
   },
   {
-    "file": "bib-og_3.json",
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 46",
+    "url": "https://ds.ccc.de/pdfs/ds046.pdf",
+    "x": 4,
+    "y": 20
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 47",
+    "url": "https://ds.ccc.de/pdfs/ds047.pdf",
+    "x": 4,
+    "y": 31
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 48",
+    "url": "https://ds.ccc.de/pdfs/ds048.pdf",
+    "x": 10,
+    "y": 28
+  },
+  {
+    "file": "bib-og_2.json",
     "tileid": 1,
-    "title": "Datenschleuder 90",
-    "url": "https://ds.ccc.de/pdfs/ds090.pdf",
+    "title": "Datenschleuder 49",
+    "url": "https://ds.ccc.de/pdfs/ds049.pdf",
+    "x": 25,
+    "y": 32
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 3,
+    "title": "Datenschleuder 5/6",
+    "url": "https://ds.ccc.de/pdfs/ds0506.pdf",
+    "x": 20,
+    "y": 2
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 1,
+    "title": "Datenschleuder 50",
+    "url": "https://ds.ccc.de/pdfs/ds050.pdf",
+    "x": 1,
+    "y": 7
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 3,
+    "title": "Datenschleuder 51",
+    "url": "https://ds.ccc.de/pdfs/ds051.pdf",
+    "x": 14,
+    "y": 35
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 52",
+    "url": "https://ds.ccc.de/pdfs/ds052.pdf",
+    "x": 5,
+    "y": 2
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 53",
+    "url": "https://ds.ccc.de/pdfs/ds053.pdf",
+    "x": 10,
+    "y": 2
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 54",
+    "url": "https://ds.ccc.de/pdfs/ds054.pdf",
+    "x": 16,
+    "y": 9
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 55",
+    "url": "https://ds.ccc.de/pdfs/ds055.pdf",
+    "x": 26,
+    "y": 35
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 56",
+    "url": "https://ds.ccc.de/pdfs/ds056.pdf",
+    "x": 30,
+    "y": 5
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 3,
+    "title": "Datenschleuder 57",
+    "url": "https://ds.ccc.de/pdfs/ds057.pdf",
+    "x": 34,
+    "y": 12
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 58",
+    "url": "https://ds.ccc.de/pdfs/ds058.pdf",
+    "x": 20,
+    "y": 6
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 59",
+    "url": "https://ds.ccc.de/pdfs/ds059.pdf",
+    "x": 34,
+    "y": 3
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 60",
+    "url": "https://ds.ccc.de/pdfs/ds060.pdf",
+    "x": 8,
+    "y": 17
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 61",
+    "url": "https://ds.ccc.de/pdfs/ds061.pdf",
+    "x": 1,
+    "y": 17
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 62",
+    "url": "https://ds.ccc.de/pdfs/ds062.pdf",
+    "x": 10,
+    "y": 27
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 63",
+    "url": "https://ds.ccc.de/pdfs/ds063.pdf",
+    "x": 1,
+    "y": 6
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 3,
+    "title": "Datenschleuder 64",
+    "url": "https://ds.ccc.de/pdfs/ds064.pdf",
+    "x": 31,
+    "y": 26
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 65",
+    "url": "https://ds.ccc.de/pdfs/ds065.pdf",
+    "x": 24,
+    "y": 5
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 0,
+    "title": "Datenschleuder 66",
+    "url": "https://ds.ccc.de/pdfs/ds066.pdf",
+    "x": 1,
+    "y": 16
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 1,
+    "title": "Datenschleuder 67",
+    "url": "https://ds.ccc.de/pdfs/ds067.pdf",
+    "x": 4,
+    "y": 11
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 3,
+    "title": "Datenschleuder 68",
+    "url": "https://ds.ccc.de/pdfs/ds068.pdf",
+    "x": 15,
+    "y": 35
+  },
+  {
+    "file": "bib-og_2.json",
+    "tileid": 2,
+    "title": "Datenschleuder 70",
+    "url": "https://ds.ccc.de/pdfs/ds070.pdf",
+    "x": 27,
+    "y": 20
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 71",
+    "url": "https://ds.ccc.de/pdfs/ds071.pdf",
     "x": 27,
     "y": 17
   },
   {
     "file": "bib-og_3.json",
-    "tileid": 1,
-    "title": "Datenschleuder 91",
-    "url": "https://ds.ccc.de/pdfs/ds091.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 72",
+    "url": "https://ds.ccc.de/pdfs/ds072.pdf",
     "x": 5,
     "y": 20
   },
   {
     "file": "bib-og_3.json",
-    "tileid": 1,
-    "title": "Datenschleuder 92",
-    "url": "https://ds.ccc.de/pdfs/ds092.pdf",
+    "tileid": 3,
+    "title": "Datenschleuder 73",
+    "url": "https://ds.ccc.de/pdfs/ds073.pdf",
     "x": 13,
     "y": 28
   },
   {
     "file": "bib-og_3.json",
-    "tileid": 1,
-    "title": "Datenschleuder 93",
-    "url": "https://ds.ccc.de/pdfs/ds093.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 74",
+    "url": "https://ds.ccc.de/pdfs/ds074.pdf",
     "x": 25,
     "y": 28
   },
   {
     "file": "bib-og_3.json",
     "tileid": 1,
-    "title": "Datenschleuder 94",
-    "url": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "title": "Datenschleuder 75",
+    "url": "https://ds.ccc.de/pdfs/ds075.pdf",
     "x": 5,
     "y": 17
   },
   {
-    "file": "bib-og_4.json",
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 76",
+    "url": "https://ds.ccc.de/pdfs/ds076.pdf",
+    "x": 31,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 77",
+    "url": "https://ds.ccc.de/pdfs/ds077.pdf",
+    "x": 1,
+    "y": 28
+  },
+  {
+    "file": "bib-og_3.json",
     "tileid": 1,
+    "title": "Datenschleuder 78",
+    "url": "https://ds.ccc.de/pdfs/ds078.pdf",
+    "x": 11,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 3,
+    "title": "Datenschleuder 79",
+    "url": "https://ds.ccc.de/pdfs/ds079.pdf",
+    "x": 4,
+    "y": 2
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 80",
+    "url": "https://ds.ccc.de/pdfs/ds080.pdf",
+    "x": 34,
+    "y": 19
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 3,
+    "title": "Datenschleuder 81",
+    "url": "https://ds.ccc.de/pdfs/ds081.pdf",
+    "x": 13,
+    "y": 2
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 82",
+    "url": "https://ds.ccc.de/pdfs/ds082.pdf",
+    "x": 14,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 83",
+    "url": "https://ds.ccc.de/pdfs/ds083.pdf",
+    "x": 8,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 84",
+    "url": "https://ds.ccc.de/pdfs/ds084.pdf",
+    "x": 12,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 3,
+    "title": "Datenschleuder 85",
+    "url": "https://ds.ccc.de/pdfs/ds085.pdf",
+    "x": 34,
+    "y": 33
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 86",
+    "url": "https://ds.ccc.de/pdfs/ds086.pdf",
+    "x": 26,
+    "y": 20
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 3,
+    "title": "Datenschleuder 87",
+    "url": "https://ds.ccc.de/pdfs/ds087.pdf",
+    "x": 16,
+    "y": 9
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 88",
+    "url": "https://ds.ccc.de/pdfs/ds088.pdf",
+    "x": 27,
+    "y": 26
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 89",
+    "url": "https://ds.ccc.de/pdfs/ds089.pdf",
+    "x": 10,
+    "y": 32
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 90",
+    "url": "https://ds.ccc.de/pdfs/ds090.pdf",
+    "x": 32,
+    "y": 35
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 9/10",
+    "url": "https://ds.ccc.de/pdfs/ds0910.pdf",
+    "x": 8,
+    "y": 22
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 91",
+    "url": "https://ds.ccc.de/pdfs/ds091.pdf",
+    "x": 34,
+    "y": 5
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 92",
+    "url": "https://ds.ccc.de/pdfs/ds092.pdf",
+    "x": 31,
+    "y": 20
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 93",
+    "url": "https://ds.ccc.de/pdfs/ds093.pdf",
+    "x": 21,
+    "y": 2
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 3,
+    "title": "Datenschleuder 94",
+    "url": "https://ds.ccc.de/pdfs/ds094.pdf",
+    "x": 27,
+    "y": 17
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
     "title": "Datenschleuder 95",
     "url": "https://ds.ccc.de/pdfs/ds095.pdf",
+    "x": 31,
+    "y": 25
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 96",
+    "url": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "x": 27,
+    "y": 14
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 0,
+    "title": "Datenschleuder 97",
+    "url": "https://ds.ccc.de/pdfs/ds097.pdf",
+    "x": 27,
+    "y": 20
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 1,
+    "title": "Datenschleuder 98",
+    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
+    "x": 1,
+    "y": 5
+  },
+  {
+    "file": "bib-og_3.json",
+    "tileid": 2,
+    "title": "Datenschleuder 99",
+    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
+    "x": 34,
+    "y": 7
+  },
+  {
+    "file": "bib-og_4.json",
+    "tileid": 0,
+    "title": "Datenschleuder 100",
+    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
     "x": 8,
     "y": 16
   },
   {
     "file": "bib-og_4.json",
-    "tileid": 1,
-    "title": "Datenschleuder 96",
-    "url": "https://ds.ccc.de/pdfs/ds096.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 101",
+    "url": "https://ds.ccc.de/pdfs/ds101.pdf",
     "x": 31,
     "y": 6
   },
   {
     "file": "bib-og_4.json",
-    "tileid": 1,
-    "title": "Datenschleuder 97",
-    "url": "https://ds.ccc.de/pdfs/ds097.pdf",
+    "tileid": 0,
+    "title": "Datenschleuder 11/12",
+    "url": "https://ds.ccc.de/pdfs/ds1112.pdf",
     "x": 8,
     "y": 21
   },
   {
     "file": "bib-og_4.json",
-    "tileid": 1,
-    "title": "Datenschleuder 98",
-    "url": "https://ds.ccc.de/pdfs/ds098.pdf",
+    "tileid": 2,
+    "title": "Datenschleuder 26/27",
+    "url": "https://ds.ccc.de/pdfs/ds2627.pdf",
     "x": 27,
     "y": 20
   },
   {
     "file": "bib-og_4.json",
-    "tileid": 1,
-    "title": "Datenschleuder 99",
-    "url": "https://ds.ccc.de/pdfs/ds099.pdf",
+    "tileid": 2,
+    "title": "Datenschleuder 28/29",
+    "url": "https://ds.ccc.de/pdfs/ds2829.pdf",
     "x": 24,
     "y": 2
-  },
-  {
-    "file": "bib-og_5.json",
-    "tileid": 1,
-    "title": "Datenschleuder 100",
-    "url": "https://ds.ccc.de/pdfs/ds100.pdf",
-    "x": 24,
-    "y": 2
-  },
-  {
-    "file": "bib-og_5.json",
-    "tileid": 1,
-    "title": "Datenschleuder 101",
-    "url": "https://ds.ccc.de/pdfs/ds101.pdf",
-    "x": 1,
-    "y": 12
   }
 ]

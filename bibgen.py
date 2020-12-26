@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 import urllib.request, json 
 import random
 from enum import Enum
@@ -281,7 +284,7 @@ class ProcessingMap():
 
 def main():
     #constants, (TODO grab them from args?)
-    MAX_BOOKS_ON_FLOOR = 5 #TODO check if number is useable, adapt if needed
+    MAX_BOOKS_ON_FLOOR = 30 #TODO check if number is useable, adapt if needed
     FILENAME_MAP_TEMPLATE ="bib-og.json"
     FILENAME_MAP_OUTPUT="bib-og_#.json"
     FILENAME_CONTENT_DEFINTION = "contentDefinition.json"
