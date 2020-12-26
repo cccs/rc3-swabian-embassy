@@ -342,6 +342,7 @@ def main():
 
         position = Position.toPosition(newLocation.positionInDataArray,currentMap.width)
         print ("processing " + content[CONTENT.title]+" on data="+str(newLocation.positionInDataArray)+" pos x="+str(position.x)+" y:"+str(position.y))
+        content["level"] = currentMap.processedMaps
         content["x"] = position.x
         content["y"] = position.y
         content["file"] = currentMap.outputFileName
