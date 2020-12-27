@@ -23,10 +23,10 @@
   </tile>
  </tileset>
  <tileset firstgid="90" name="mapUtilities" tilewidth="32" tileheight="32" tilecount="9" columns="9">
-  <image source="../../kidspace/rc3-pgspace/tiles/mapUtilities.png" width="288" height="32"/>
+  <image source="tiles/mapUtilities.png" width="288" height="32"/>
  </tileset>
  <tileset firstgid="99" name="worldExit" tilewidth="32" tileheight="32" tilecount="4" columns="2">
-  <image source="../../kidspace/rc3-pgspace/tiles/worldExit.png" width="64" height="64"/>
+  <image source="tiles/worldExit.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="103" name="cert-safety_set" tilewidth="32" tileheight="32" tilecount="32" columns="16">
   <image source="tiles/cert-safety_set.png" width="512" height="64"/>
