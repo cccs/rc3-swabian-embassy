@@ -372,7 +372,7 @@
  </layer>
  <layer id="12" name="urlBBB" width="62" height="47">
   <properties>
-   <property name="openWebsite" value="https://rc3.world/rc3/room/5eb8cfa0-883a-4144-8150-6f6bdb8a57b0/"/>
+   <property name="openWebsite" value="https://rc3.cccs.de/vortragssaal.html"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
