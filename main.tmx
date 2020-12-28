@@ -437,7 +437,7 @@
  </layer>
  <layer id="17" name="urlConfirmBadge" width="36" height="22">
   <properties>
-   <property name="openWebsite" value="https://rc3.world/rc3/me/manage_badges"/>
+   <property name="openWebsite" value="https://rc3.cccs.de/badge.html"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

@@ -158,7 +158,7 @@
                 {
                  "name":"openWebsite",
                  "type":"string",
-                 "value":"https:\/\/rc3.world\/rc3\/me\/manage_badges"
+                 "value":"https:\/\/rc3.cccs.de\/badge.html"
                 }],
          "type":"tilelayer",
          "visible":true,
