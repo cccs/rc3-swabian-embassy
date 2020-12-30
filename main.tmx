@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="1">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="1">
  <editorsettings>
   <export target="main.json" format="json"/>
  </editorsettings>
@@ -292,7 +292,7 @@
  </layer>
  <layer id="10" name="toLobby" width="36" height="22">
   <properties>
-   <property name="exitUrl" value="{&lt;lobby&gt;/erfas-south.json#start_space-bi}"/>
+   <property name="exitUrl" value="{&lt;lobby&gt;/maps/erfas-south.json#start_swabian-embassy}"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

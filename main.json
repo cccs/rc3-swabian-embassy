@@ -68,7 +68,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"{<lobby>\/erfas-south.json#start_space-bi}"
+                 "value":"{<lobby>\/maps\/erfas-south.json#start_swabian-embassy}"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -283,7 +283,7 @@
          "value":true
         }],
  "renderorder":"right-down",
- "tiledversion":"1.4.2",
+ "tiledversion":"1.4.3",
  "tileheight":32,
  "tilesets":[
         {
