@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="3">
  <editorsettings>
   <export target="main.json" format="json"/>
  </editorsettings>
@@ -7,9 +7,15 @@
   <property name="startLayer" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" name="floortileset" tilewidth="32" tileheight="32" tilecount="64" columns="8">
+  <properties>
+   <property name="tilesetCopyright" value="by Chaosz0ne"/>
+  </properties>
   <image source="tiles/floortileset.png" width="256" height="256"/>
  </tileset>
  <tileset firstgid="65" name="bibliothek-ext" tilewidth="32" tileheight="32" tilecount="35" columns="5">
+  <properties>
+   <property name="tilesetCopyright" value="CC-BY-SA Skyr"/>
+  </properties>
   <image source="tiles/bibliothek-ext.png" width="160" height="224"/>
   <tile id="6">
    <properties>
@@ -35,12 +41,21 @@
   </tile>
  </tileset>
  <tileset firstgid="100" name="mapUtilities" tilewidth="32" tileheight="32" tilecount="9" columns="9">
+  <properties>
+   <property name="tilesetCopyright" value="by rc3 starterkti"/>
+  </properties>
   <image source="tiles/mapUtilities.png" width="288" height="32"/>
  </tileset>
  <tileset firstgid="109" name="worldExit" tilewidth="32" tileheight="32" tilecount="4" columns="2">
+  <properties>
+   <property name="tilesetCopyright" value="by rc3 starterkit"/>
+  </properties>
   <image source="tiles/worldExit.png" width="64" height="64"/>
  </tileset>
  <tileset firstgid="113" name="cert-safety_set" tilewidth="32" tileheight="32" tilecount="32" columns="16">
+  <properties>
+   <property name="tilesetCopyright" value="by CERT"/>
+  </properties>
   <image source="tiles/cert-safety_set.png" width="512" height="64"/>
   <tile id="6">
    <properties>
@@ -94,6 +109,9 @@
   </tile>
  </tileset>
  <tileset firstgid="145" name="cija_32x32_expansion for Pipoya_CC0" tilewidth="32" tileheight="32" tilecount="2394" columns="18">
+  <properties>
+   <property name="tilesetCopyright" value="CC0"/>
+  </properties>
   <image source="tiles/cija_32x32_expansion for Pipoya_CC0.png" width="576" height="4256"/>
   <tile id="1607">
    <properties>
@@ -192,6 +210,9 @@
   </tile>
  </tileset>
  <tileset firstgid="2539" name="bib-structures" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <properties>
+   <property name="tilesetCopyright" value="CC-BY-SA Skyr"/>
+  </properties>
   <image source="tiles/bib-structures.png" width="512" height="512"/>
   <tile id="87">
    <animation>
@@ -292,7 +313,7 @@
  </layer>
  <layer id="10" name="toLobby" width="36" height="22">
   <properties>
-   <property name="exitUrl" value="{&lt;lobby&gt;/maps/erfas-south.json#start_swabian-embassy}"/>
+   <property name="exitUrl" value="world://lobby/islanooblar.json#start_swabian-embassy"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -493,35 +514,13 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer id="15" name="badge" width="36" height="22">
-  <properties>
-   <property name="getBadge" value="YWUt43HfsAzJV021gH8Y238dm2KxElY0IC3y49lwM7TdijlsF6"/>
-  </properties>
-  <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,107,107,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,107,107,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,107,107,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,107,107,107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-</data>
- </layer>
+ <objectgroup id="18" name="badge">
+  <object id="1" x="577.158" y="447.992" width="94.2855" height="126.441">
+   <properties>
+    <property name="getBadge" value="E51fwdV4BpZ9y5MZ5ddEbWOJBE6Yn8k4SPUlg3DYShx6fhR1WG"/>
+   </properties>
+  </object>
+ </objectgroup>
  <layer id="4" name="Floor" width="36" height="22">
   <data encoding="csv">
 16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,38,39,24,14,14,14,3,11,3,3,3,5,13,13,13,12,24,0,0,0,
