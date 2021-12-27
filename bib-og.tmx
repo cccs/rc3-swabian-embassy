@@ -315,7 +315,7 @@
  </layer>
  <layer id="7" name="toMain" width="36" height="37">
   <properties>
-   <property name="exitSceneUrl" value="main.json#fromBib"/>
+   <property name="exitUrl" value="main.json#fromBib"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -359,7 +359,7 @@
  </layer>
  <layer id="8" name="toNext" width="36" height="37">
   <properties>
-   <property name="exitSceneUrl" value="bib-og.json#fromBottom"/>
+   <property name="exitUrl" value="bib-og.json#fromBottom"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

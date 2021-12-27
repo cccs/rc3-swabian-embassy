@@ -256,8 +256,8 @@ class ProcessingMap():
         for index in range (1,len(self.generatedMaps)):
             previousGenMap = self.generatedMaps[index-1]
             actualGenMap = self.generatedMaps[index]
-            self.setLayerProperty(previousGenMap.data,"toNext","exitSceneUrl",actualGenMap.filename+"#fromBottom")
-            self.setLayerProperty(actualGenMap.data,"toPrev","exitSceneUrl",previousGenMap.filename+"#fromTop")
+            self.setLayerProperty(previousGenMap.data,"toNext","exitUrl",actualGenMap.filename+"#fromBottom")
+            self.setLayerProperty(actualGenMap.data,"toPrev","exitUrl",previousGenMap.filename+"#fromTop")
             
 
 
