@@ -491,7 +491,7 @@
  </layer>
  <layer id="9" name="toPrev" width="36" height="37">
   <properties>
-   <property name="exitSceneUrl" value="bib-eg.json#fromTop"/>
+   <property name="exitUrl" value="bib-eg.json#fromTop"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
