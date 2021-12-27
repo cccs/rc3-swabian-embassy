@@ -1,11 +1,4 @@
 { "compressionlevel":-1,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"json"
-        }
-    },
  "height":37,
  "infinite":false,
  "layers":[
@@ -186,7 +179,7 @@
  "nextobjectid":1,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.4.3",
+ "tiledversion":"1.7.2",
  "tileheight":32,
  "tilesets":[
         {
@@ -197,6 +190,12 @@
          "imagewidth":512,
          "margin":0,
          "name":"bib-structures",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"CC BY-SA Skyr"
+                }],
          "spacing":0,
          "tilecount":256,
          "tileheight":32,
@@ -646,6 +645,12 @@
          "imagewidth":64,
          "margin":0,
          "name":"cert-misc_set",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"by CERT"
+                }],
          "spacing":0,
          "tilecount":52,
          "tileheight":32,
@@ -659,6 +664,12 @@
          "imagewidth":512,
          "margin":0,
          "name":"cert-safety_set",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"by CERT"
+                }],
          "spacing":0,
          "tilecount":32,
          "tileheight":32,
@@ -672,6 +683,12 @@
          "imagewidth":288,
          "margin":0,
          "name":"mapUtilities",
+         "properties":[
+                {
+                 "name":"tilesetCopyright",
+                 "type":"string",
+                 "value":"by rc3 starter kit"
+                }],
          "spacing":0,
          "tilecount":9,
          "tileheight":32,
@@ -679,6 +696,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":1.4,
+ "version":"1.6",
  "width":36
 }

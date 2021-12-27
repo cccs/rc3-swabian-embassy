@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.2" orientation="orthogonal" renderorder="right-down" width="62" height="47" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="1">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="62" height="47" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="1">
  <editorsettings>
   <export target="bib-ug.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="bib-structures" tilewidth="32" tileheight="32" tilecount="256" columns="16">
+  <properties>
+   <property name="tilesetCopyright" value="CC BY-SA Skyr"/>
+  </properties>
   <image source="tiles/bib-structures.png" width="512" height="512"/>
   <tile id="7">
    <properties>
@@ -251,15 +254,27 @@
   </tile>
  </tileset>
  <tileset firstgid="257" name="cert-misc_set" tilewidth="32" tileheight="32" tilecount="52" columns="2">
+  <properties>
+   <property name="tilesetCopyright" value="by CERT"/>
+  </properties>
   <image source="tiles/cert-misc_set.png" width="64" height="832"/>
  </tileset>
  <tileset firstgid="309" name="cert-safety_set" tilewidth="32" tileheight="32" tilecount="32" columns="16">
+  <properties>
+   <property name="tilesetCopyright" value="by CERT"/>
+  </properties>
   <image source="tiles/cert-safety_set.png" width="512" height="64"/>
  </tileset>
  <tileset firstgid="341" name="furniture" tilewidth="32" tileheight="32" tilecount="1024" columns="16">
+  <properties>
+   <property name="tilesetCopyright" value="by CERT"/>
+  </properties>
   <image source="tiles/furniture.png" width="512" height="2048"/>
  </tileset>
  <tileset firstgid="1365" name="mapUtilities" tilewidth="32" tileheight="32" tilecount="9" columns="9">
+  <properties>
+   <property name="tilesetCopyright" value="by rc3 starter kit"/>
+  </properties>
   <image source="tiles/mapUtilities.png" width="288" height="32"/>
  </tileset>
  <layer id="11" name="soundToilet" width="62" height="47">
