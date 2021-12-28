@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"main.json"
+        }
+    },
  "height":22,
  "infinite":false,
  "layers":[
@@ -60,7 +68,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"world:\/\/lobby\/islanooblar.json#start_swabian-embassy"
+                 "value":"world:\/\/lobby\/punchcard.json#start_swabian-embassy"
                 }],
          "type":"tilelayer",
          "visible":true,
@@ -182,7 +190,7 @@
          "name":"badge",
          "objects":[
                 {
-                 "height":126.440685984625,
+                 "height":126.441,
                  "id":1,
                  "name":"",
                  "properties":[
@@ -194,9 +202,9 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":94.2855115316381,
-                 "x":577.158131283264,
-                 "y":447.992430514488
+                 "width":94.2855,
+                 "x":577.158,
+                 "y":447.992
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -285,7 +293,7 @@
          "value":true
         }],
  "renderorder":"right-down",
- "tiledversion":"1.7.2",
+ "tiledversion":"1.3.3",
  "tileheight":32,
  "tilesets":[
         {
@@ -754,6 +762,6 @@
         }],
  "tilewidth":32,
  "type":"map",
- "version":"1.6",
+ "version":1.2,
  "width":36
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="3">
+<map version="1.2" tiledversion="1.3.3" orientation="orthogonal" renderorder="right-down" width="36" height="22" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="3">
  <editorsettings>
   <export target="main.json" format="json"/>
  </editorsettings>
@@ -313,7 +313,7 @@
  </layer>
  <layer id="10" name="toLobby" width="36" height="22">
   <properties>
-   <property name="exitUrl" value="world://lobby/islanooblar.json#start_swabian-embassy"/>
+   <property name="exitUrl" value="world://lobby/punchcard.json#start_swabian-embassy"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
